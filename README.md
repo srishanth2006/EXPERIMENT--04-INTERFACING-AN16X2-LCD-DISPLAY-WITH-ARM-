@@ -1,5 +1,6 @@
 # EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM AND DISPLAY STRING
-## Aim: To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
+
+ ## Aim: To Interface a 16X2 LCD display to ARM controller  , and simulate it in Proteus 
 ## Components required: STM32 CUBE IDE, Proteus 8 simulator .
 ## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
@@ -126,12 +127,14 @@ Jump to second line, position 2
 4.select the program name 
 ![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
 
+
 5. corresponding ioc file will be generated automatically 
 ![image](https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png)
 
 6.select the appropriate pins as gipo, in or out, USART or required options and configure 
 ![image](https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png)
+
 
 7.click on cntrl+S , automaticall C program will be generated 
 ![image](https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png)
@@ -147,6 +150,7 @@ Jump to second line, position 2
 
 11. click on debug option 
 ![image](https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png)
+
 
 12.  Creating Proteus project and running the simulation
 We are now at the last part of step by step guide on how to simulate STM32 project in Proteus.
@@ -266,7 +270,7 @@ int main(void)
   Lcd_HandleTypeDef lcd;
   lcd=Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
   Lcd_cursor(&lcd,0,1);
-  Lcd_string(&lcd,"INDU V");
+  Lcd_string(&lcd,"RITHVIK S");
   Lcd_cursor(&lcd,1,1);
   Lcd_string(&lcd,"TSEC250");
   /* Infinite loop */
@@ -398,14 +402,17 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 ```
+
+
+
 ## Output screen shots of proteus  :
- ![WhatsApp Image 2025-09-23 at 14 38 38_d3a33da8](https://github.com/user-attachments/assets/7884463f-0f5a-41c2-b21b-5592bc1aeeed)
+<img width="1704" height="1095" alt="Screenshot 2025-10-30 143331" src="https://github.com/user-attachments/assets/50ec9eb1-7185-4c79-96bb-1cb0e77d57c1" />
 
- 
-## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
- <img width="956" height="581" alt="image" src="https://github.com/user-attachments/assets/6ff66aa4-543c-4c5e-94e2-b336b33a7961" />
 
- 
+
+ ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ <img width="966" height="841" alt="image" src="https://github.com/user-attachments/assets/52873630-20b1-42f2-bff5-d0609447a037" />
+
 ## Result :
 Interfacing a lcd display with ARM microcontroller are simulated in proteus and the results are verified.
 
